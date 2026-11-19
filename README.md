@@ -1,6 +1,6 @@
 # iPhone 电影感摄影指南
 
-**免费、开源的 iPhone 电影感拍摄 + Apple Log 2 调色完整指南：9 个实测过的免费 LUT、7 篇从设置到成片的指南、20 张前后对比样片。**
+**免费、开源的 iPhone 电影感拍摄 + Apple Log 2 调色完整指南：9 个实测过的免费 LUT、7 篇从设置到成片的指南、40 张前后对比样片。**
 
 拍 Log 不是为了显得专业，是为了把手机传感器的宽容度用满。套一个为 Apple Log 2 实测过的 LUT，iPhone 拍出来的东西就能有电影感——不是滤镜那种假电影感，是曝光、色彩、影调都对的电影感。本仓库从拍摄设置讲到调色输出，跟着做一遍，就能完整跑通 iPhone 电影感的全流程。
 
@@ -10,37 +10,37 @@
 
 ## 效果预览：Log 原片 vs 套 LUT 之后
 
-下面 4 组对比，左边是 Apple Log 2 原片（灰、平），右边是套上 LUT 之后的效果。室外帧是 iPhone 17 Pro Max 实拍，室内帧是欠曝一档的模拟帧（故意选最难的场景验收）。
+下面 4 组对比，左边是模拟 Apple Log 2 帧（灰、平），右边是套上 LUT 之后的效果。底图是 4 张真实照片（Pexels 免费授权），先按 Apple Log 2 曲线模拟成 Log 帧，再用 ffmpeg 实跑 LUT——不是 iPhone 直出，是用来看 LUT 性格的演示帧，做法见 [examples/README.md](examples/README.md)。
 
-**Gold 金胶卷 v2 · 室外实拍**
+**Gold 金胶卷 v2 · 街头日光**
 
-| Apple Log 2 原片 | Gold 金胶卷 v2 |
+| Apple Log 2 模拟帧 | Gold 金胶卷 v2 |
 |---|---|
-| ![室外 Log 原片](examples/outdoor/outdoor_log.jpg) | ![室外 Gold v2](examples/outdoor/outdoor_gold-v2.jpg) |
+| ![街头 Log 模拟帧](examples/street/street_log.jpg) | ![街头 Gold v2](examples/street/street_gold-v2.jpg) |
 
-**Portra 400 v2 · 室内欠曝一档**
+**Portra 400 v2 · 室内暖光**
 
-| Apple Log 2 原片 | Portra 400 v2 |
+| Apple Log 2 模拟帧 | Portra 400 v2 |
 |---|---|
-| ![室内 Log 原片](examples/indoor/indoor_log.jpg) | ![室内 Portra v2](examples/indoor/indoor_portra-v2.jpg) |
+| ![室内 Log 模拟帧](examples/indoor/indoor_log.jpg) | ![室内 Portra v2](examples/indoor/indoor_portra-v2.jpg) |
 
-**橙青大片 TealOrange · 室外实拍**
+**橙青大片 TealOrange · 落日海滩**
 
-| Apple Log 2 原片 | 橙青大片 |
+| Apple Log 2 模拟帧 | 橙青大片 |
 |---|---|
-| ![室外 Log 原片](examples/outdoor/outdoor_log.jpg) | ![室外 TealOrange](examples/outdoor/outdoor_teal-orange.jpg) |
+| ![落日 Log 模拟帧](examples/sunset/sunset_log.jpg) | ![落日 TealOrange](examples/sunset/sunset_teal-orange.jpg) |
 
-**黑色电影 Noir · 室内欠曝一档**
+**黑色电影 Noir · 夜景霓虹**
 
-| Apple Log 2 原片 | 黑色电影 Noir |
+| Apple Log 2 模拟帧 | 黑色电影 Noir |
 |---|---|
-| ![室内 Log 原片](examples/indoor/indoor_log.jpg) | ![室内 Noir](examples/indoor/indoor_noir.jpg) |
+| ![夜景 Log 模拟帧](examples/night/night_log.jpg) | ![夜景 Noir](examples/night/night_noir.jpg) |
 
-全部 20 张样片（2 张测试帧 × 10 个版本）和看图要点，见 [examples/README.md](examples/README.md)。
+全部 40 张样片（4 个场景 × 10 个版本）和看图要点，见 [examples/README.md](examples/README.md)。
 
 ## 9 个 LUT
 
-全部免费，33³ `.cube` 格式，可直接导入 Blackmagic Cam 做监看，也可在 DaVinci Resolve / Premiere Pro / Final Cut Pro 里套用。每个 LUT 都在室外实拍帧和室内欠曝一档帧上验证过。
+全部免费，33³ `.cube` 格式，可直接导入 Blackmagic Cam 做监看，也可在 DaVinci Resolve / Premiere Pro / Final Cut Pro 里套用。每个 LUT 都在 4 个场景上实跑过效果，见 [examples/](examples/)；v2 底子另在 iPhone 实拍素材的监看中验证过，不发灰。
 
 | LUT | 文件 | 黑位 | 一句话 |
 |---|---|---|---|
@@ -66,9 +66,9 @@
 
 市面上的 LUT，几乎都是给索尼 S-Log、佳能 C-Log、松下 V-Log 做的，专门给 iPhone Apple Log 2 做的胶片感 LUT 很少。拿索尼的 LUT 套 iPhone 素材，色彩空间不对，出来的东西总差一口气。
 
-这 9 个 LUT 是为 Apple Log 2 从零手调的，每一个都在两张测试帧上验证过：室外实拍帧看色彩和对比，室内欠曝一档帧看黑位和暗部。第一版 Gold 就是在室内帧上翻车的——室外看着好好的，室内一暗就发灰。这个教训直接变成了本仓库的验收标准：只在室外好看的 LUT，不发布。
+这 9 个 LUT 是为 Apple Log 2 从零手调的，调色效果在 iPhone 实拍素材的监看中验证过。第一版 Gold 就是在实测中翻车的——室外大太阳下看着好好的，一到室内偏暗场景就发灰。这个教训直接变成了本仓库的验收标准：只在明亮场景好看的 LUT，不发布；暗部必须过关。
 
-另外，这些 LUT 不是从别处搬运、改名、打包的。每一个的曲线、饱和、黑位，都是在 iPhone 17 Pro Max 实拍素材上反复调出来的。样片里的每一帧，都是用 ffmpeg 实跑对应 `.cube` 生成的，套上去就是这个效果，不存在“示意图仅供参考”。
+另外，这些 LUT 不是从别处搬运、改名、打包的。每一个的曲线、饱和、黑位，都是结合 iPhone 实拍监看反馈反复调出来的。样片里的每一帧，都是用 ffmpeg 实跑对应 `.cube` 生成的（底图是真实照片，先模拟成 Log 帧再套 LUT），套上去就是这个效果，不存在“示意图仅供参考”。
 
 ## 怎么选第一个 LUT
 
@@ -149,9 +149,11 @@ iphone-cinematic-guide/
 ├── LICENSE                    CC BY-NC-SA 4.0 许可全文
 ├── CONTRIBUTING.md            如何投稿、提建议、报问题
 ├── luts/                      9 个 .cube 文件 + 清单说明
-├── examples/                  20 张样片（室内 10 张 + 室外 10 张）
-│   ├── indoor/                室内欠曝一档帧：Log 原片 + 9 个调色版
-│   └── outdoor/               室外实拍帧：Log 原片 + 9 个调色版
+├── examples/                  40 张样片（4 个场景 × 10 张）
+│   ├── street/                街头日光：Log 模拟帧 + 9 个调色版
+│   ├── sunset/                落日海滩：Log 模拟帧 + 9 个调色版
+│   ├── night/                 夜景霓虹：Log 模拟帧 + 9 个调色版
+│   └── indoor/                室内暖光：Log 模拟帧 + 9 个调色版
 └── guides/                    7 篇指南 + FAQ
 ```
 
@@ -159,7 +161,7 @@ iphone-cinematic-guide/
 
 ## 获取更新
 
-新 LUT 和新指南发布时，会直接更新到这个仓库。点仓库右上角的 `Watch` 可以收到更新通知。更新标准和现在一样：新 LUT 必须在室外实拍帧和室内欠曝一档帧上验证过、黑位和暗部过关才发布，不会为了凑数量发没验证过的版本。
+新 LUT 和新指南发布时，会直接更新到这个仓库。点仓库右上角的 `Watch` 可以收到更新通知。更新标准和现在一样：新 LUT 必须在多个真实场景和实拍素材上验证过、黑位和暗部过关才发布，不会为了凑数量发没验证过的版本。
 
 ## 适用范围
 

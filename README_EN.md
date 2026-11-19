@@ -1,6 +1,6 @@
 # iPhone Cinematic Photography Guide
 
-**A free, open-source guide to cinematic iPhone shooting and Apple Log 2 color grading: 9 tested LUTs, 7 step-by-step guides, and 20 before/after samples.**
+**A free, open-source guide to cinematic iPhone shooting and Apple Log 2 color grading: 9 tested LUTs, 7 step-by-step guides, and 40 before/after samples.**
 
 Shooting Log isn't about looking professional — it's about using the full dynamic range your phone's sensor can capture. Pair that with a LUT actually tested on Apple Log 2, and iPhone footage starts to look like cinema. Not filter-fake cinema: exposure, color, and tone that are genuinely right.
 
@@ -10,37 +10,37 @@ Shooting Log isn't about looking professional — it's about using the full dyna
 
 ## Before & After: Log vs Graded
 
-Four comparisons below. Left is the flat, gray Apple Log 2 original; right is the same frame with a LUT applied. Outdoor frames are real iPhone 17 Pro Max footage; indoor frames are a simulated shot underexposed by one stop — deliberately the hardest test.
+Four comparisons below. Left is the flat, gray simulated Apple Log 2 frame; right is the same frame with a LUT applied. The base images are four real photos (free license from Pexels), converted to Log 2 with the Apple Log curve and graded with ffmpeg — not iPhone footage, but demonstration frames that show each LUT's character. Full method: [examples/README.md](examples/README.md).
 
-**Gold v2 · Outdoor**
+**Gold v2 · Street daylight**
 
-| Apple Log 2 Original | Gold v2 |
+| Simulated Apple Log 2 | Gold v2 |
 |---|---|
-| ![Outdoor Log original](examples/outdoor/outdoor_log.jpg) | ![Outdoor Gold v2](examples/outdoor/outdoor_gold-v2.jpg) |
+| ![Street Log frame](examples/street/street_log.jpg) | ![Street Gold v2](examples/street/street_gold-v2.jpg) |
 
-**Portra 400 v2 · Indoor, 1 stop underexposed**
+**Portra 400 v2 · Warm indoor light**
 
-| Apple Log 2 Original | Portra 400 v2 |
+| Simulated Apple Log 2 | Portra 400 v2 |
 |---|---|
-| ![Indoor Log original](examples/indoor/indoor_log.jpg) | ![Indoor Portra v2](examples/indoor/indoor_portra-v2.jpg) |
+| ![Indoor Log frame](examples/indoor/indoor_log.jpg) | ![Indoor Portra v2](examples/indoor/indoor_portra-v2.jpg) |
 
-**Teal & Orange · Outdoor**
+**Teal & Orange · Beach sunset**
 
-| Apple Log 2 Original | Teal & Orange |
+| Simulated Apple Log 2 | Teal & Orange |
 |---|---|
-| ![Outdoor Log original](examples/outdoor/outdoor_log.jpg) | ![Outdoor Teal Orange](examples/outdoor/outdoor_teal-orange.jpg) |
+| ![Sunset Log frame](examples/sunset/sunset_log.jpg) | ![Sunset Teal Orange](examples/sunset/sunset_teal-orange.jpg) |
 
-**Noir · Indoor, 1 stop underexposed**
+**Noir · Neon night**
 
-| Apple Log 2 Original | Noir |
+| Simulated Apple Log 2 | Noir |
 |---|---|
-| ![Indoor Log original](examples/indoor/indoor_log.jpg) | ![Indoor Noir](examples/indoor/indoor_noir.jpg) |
+| ![Night Log frame](examples/night/night_log.jpg) | ![Night Noir](examples/night/night_noir.jpg) |
 
-All 20 samples (2 test frames × 10 versions) and viewing notes: [examples/README.md](examples/README.md).
+All 40 samples (4 scenes × 10 versions) and viewing notes: [examples/README.md](examples/README.md).
 
 ## The 9 LUTs
 
-All free, 33³ `.cube` files. Import into Blackmagic Cam for on-set monitoring, or apply in DaVinci Resolve / Premiere Pro / Final Cut Pro. Each one is verified on both an outdoor frame and an indoor frame underexposed by one stop.
+All free, 33³ `.cube` files. Import into Blackmagic Cam for on-set monitoring, or apply in DaVinci Resolve / Premiere Pro / Final Cut Pro. Each one has been run on all four sample scenes — see [examples/](examples/) — and the v2 base was additionally verified on real iPhone footage during on-device monitoring.
 
 | LUT | File | Black point | In one line |
 |---|---|---|---|
