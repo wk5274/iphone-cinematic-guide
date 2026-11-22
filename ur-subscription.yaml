@@ -1,0 +1,21 @@
+proxies:
+  - name: "UR-RI-Verizon"
+    type: http
+    server: 06gvu11jhnj41pqkq47kfo33togd6acjvmvsibjdlo3ob1v21vdp4fege0.crisp.bringyour.com
+    port: 7119
+    tls: true
+  - name: "UR-SanDiego-Charter"
+    type: http
+    server: 06gvudvil25vqbqp43vpmm8ijjhj9bke8kk4gatapci4v5p1uqnvm7nma8.fireside.bringyour.com
+    port: 7119
+    tls: true
+  - name: "UR-Houston-Comcast"
+    type: http
+    server: 06gvue1uo4jqbvk39763rhs0tfp722fkqps3tet8f4ll84od08dkmgm1o4.fireside.bringyour.com
+    port: 7161
+    tls: true
+  - name: "UR-SanDiego-Charter-2"
+    type: http
+    server: 06gvued8q5mrqi78bs29tl69eijo469hi1iagba9isgko79op64d9ho0p0.crisp.bringyour.com
+    port: 7161
+    tls: true
