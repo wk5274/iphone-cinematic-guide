@@ -19,8 +19,3 @@ proxies:
     server: 06gvued8q5mrqi78bs29tl69eijo469hi1iagba9isgko79op64d9ho0p0.crisp.bringyour.com
     port: 7161
     tls: true
-  - name: "UR-SantaAna-TMobile"
-    type: http
-    server: 06h05t2uit0etskhdqv2iiock6ki16e5at1hpkjsk5ddh70cd9d5nu86ds.crisp.bringyour.com
-    port: 7173
-    tls: true
