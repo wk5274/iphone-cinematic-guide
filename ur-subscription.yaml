@@ -19,3 +19,8 @@ proxies:
     server: 06gvued8q5mrqi78bs29tl69eijo469hi1iagba9isgko79op64d9ho0p0.crisp.bringyour.com
     port: 7161
     tls: true
+  - name: "UR-OklahomaCity-ATT"
+    type: http
+    server: 06h0u0lk8530ckjckpt9s67urup7cr489qqdrpf0r09mhab9vbdq8hjnso.crisp.bringyour.com
+    port: 7167
+    tls: true
